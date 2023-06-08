@@ -14,10 +14,12 @@ public class SecurityConfig {
     @Bean
     protected SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http.authorizeHttpRequests((requests) -> requests
-                .requestMatchers("/", "/registration")
-                .permitAll()
-                .anyRequest().authenticated()
-                )
+                        .requestMatchers("/", "/registration")
+                        .permitAll()
+                        .requestMatchers("/teacher_panel/**").hasRole("ROLE_TEACHER")
+                        .requestMatchers("/student_panel/**").hasRole("ROLE_STUDENT")
+                        .requestMatchers("/admin_panel/**").hasRole("ROLE_ADMIN")
+                        .anyRequest().authenticated())
                 .formLogin((form) -> form
                         .loginPage("/login")
                         .permitAll()
