@@ -23,7 +23,7 @@
                         </form>
                     </div>
                     <div class="card-footer text-muted">
-                        Нет аккаунта? <a href="/register">Зарегистрироваться</a>
+                        Нет аккаунта? <a href="/registration">Зарегистрироваться</a>
                     </div>
                 </div>
             </div>

@@ -20,6 +20,10 @@
                                 <input type="email" class="form-control" id="email" name="email" required>
                             </div>
                             <div class="form-group">
+                                <label for="phoneNumber">Номер телефона</label>
+                                <input type="phoneNumber" class="form-control" id="phoneNumber" name="phoneNumber" required>
+                            </div>
+                            <div class="form-group">
                                 <label for="password">Пароль</label>
                                 <input type="password" class="form-control" id="password" name="password" required>
                             </div>
