@@ -1,6 +1,5 @@
 package com.example.project_management_system.entities;
 
-import com.example.project_management_system.entities.enums.Role;
 import jakarta.persistence.*;
 import lombok.Data;
 import org.springframework.security.core.GrantedAuthority;
@@ -23,8 +22,7 @@ public class User implements UserDetails {
     @Column(columnDefinition = "date")
     private LocalDate dateOfBirth;
     private String gender;
-    private String studyGroup;
-    private int course;
+    private String description;
 
     @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     @JoinColumn
@@ -33,12 +31,7 @@ public class User implements UserDetails {
     private String activationCode;
     @Column(length = 1000)
     private String password;
-
-    @ElementCollection(targetClass = Role.class, fetch = FetchType.EAGER)
-    @CollectionTable(name = "user_role",
-            joinColumns = @JoinColumn(name = "user_id"))
-    @Enumerated(EnumType.STRING)
-    private Set<Role> roles = new HashSet<>();
+    private String role;
 
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER,
             mappedBy = "user")
@@ -106,20 +99,20 @@ public class User implements UserDetails {
         this.gender = gender;
     }
 
-    public String getStudyGroup() {
-        return studyGroup;
+    public String getRole() {
+        return role;
     }
 
-    public void setStudyGroup(String group) {
-        this.studyGroup = group;
+    public void setRole(String role) {
+        this.role = role;
     }
 
-    public int getCourse() {
-        return course;
+    public String getDescription() {
+        return description;
     }
 
-    public void setCourse(int course) {
-        this.course = course;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     @Override
