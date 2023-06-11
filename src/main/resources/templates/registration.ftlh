@@ -50,7 +50,7 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="description">Подробнее</label>
+                                <label for="description">Подробная информация</label>
                                 <textarea class="form-control" id="description" name="description" rows="4" required></textarea>
                             </div>
                             <div class="form-group">

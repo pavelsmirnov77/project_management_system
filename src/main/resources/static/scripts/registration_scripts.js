@@ -52,7 +52,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function checkPasswordStrength(password) {
         var strength = 0;
-
         if (password.length >= 8) {
             strength += 1;
         }
