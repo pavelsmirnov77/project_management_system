@@ -2,6 +2,7 @@
 <@t.template user>
     <title>Регистрация</title>
     <link rel= "stylesheet" href="/static/css/styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <block>
         <div class="row justify-content-center">
             <div class="col-md-6">
@@ -21,13 +22,13 @@
                             </div>
                             <div class="form-group">
                                 <label for="gender">Пол</label><br>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="gender" id="male" value="male" required>
-                                    <label class="form-check-label" for="male">Мужской</label>
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" id="male" name="gender" class="custom-control-input" value="male" required>
+                                    <label class="custom-control-label" for="male">Мужской</label>
                                 </div>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="gender" id="female" value="female" required>
-                                    <label class="form-check-label" for="female">Женский</label>
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" id="female" name="gender" class="custom-control-input" value="female" required>
+                                    <label class="custom-control-label" for="female">Женский</label>
                                 </div>
                             </div>
                             <div class="form-group">
@@ -40,13 +41,13 @@
                             </div>
                             <div class="form-group">
                                 <label for="gender">Роль</label><br>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="role" id="student" value="student" required>
-                                    <label class="form-check-label" for="student">Студент</label>
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input class="custom-control-input" type="radio" name="role" id="student" value="student" required>
+                                    <label class="custom-control-label" for="student">Студент</label>
                                 </div>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="role" id="teacher" value="teacher" required>
-                                    <label class="form-check-label" for="teacher">Преподаватель</label>
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input class="custom-control-input" type="radio" name="role" id="teacher" value="teacher" required>
+                                    <label class="custom-control-label" for="teacher">Преподаватель</label>
                                 </div>
                             </div>
                             <div class="form-group">
