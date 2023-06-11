@@ -55,13 +55,13 @@
                             </div>
                             <div class="form-group">
                                 <label for="password">Пароль</label>
-                                <input type="password" class="form-control" id="password" name="password" required>
+                                <input type="password" class="form-control" id="password" name="password" data-toggle="popover" data-trigger="focus" data-placement="right" required>
                             </div>
                             <div class="form-group">
                                 <label for="confirmPassword">Подтвердите пароль</label>
-                                <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" title="Пароли должны совпадать" required>
+                                <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" required>
                             </div>
-                            <script src="/static/scripts/password_confirm_script.js"></script>
+                            <script src="/static/scripts/registration_scripts.js"></script>
                             <button type="submit" class="btn btn-primary">Зарегистрироваться</button>
                         </form>
                     </div>
