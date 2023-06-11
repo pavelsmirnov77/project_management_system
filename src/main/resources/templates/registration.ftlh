@@ -32,7 +32,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="dateOfBirth">Дата рождения</label>
-                                <input type="dateOfBirth" class="form-control" id="dateOfBirth" name="dateOfBirth" required>
+                                <input type="text" class="form-control" id="dateOfBirth" name="dateOfBirth" required placeholder="дд.мм.гггг">
                             </div>
                             <div class="form-group">
                                 <label for="phoneNumber">Номер телефона</label>
@@ -59,8 +59,9 @@
                             </div>
                             <div class="form-group">
                                 <label for="confirmPassword">Подтвердите пароль</label>
-                                <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" required>
+                                <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" title="Пароли должны совпадать" required>
                             </div>
+                            <script src="/static/scripts/password_confirm_script.js"></script>
                             <button type="submit" class="btn btn-primary">Зарегистрироваться</button>
                         </form>
                     </div>
