@@ -34,6 +34,7 @@ document.getElementById('email').addEventListener('input', function() {
     }
 });
 
+//Скрипт для проверки сложности пароля
 document.addEventListener('DOMContentLoaded', function() {
     const passwordInput = document.getElementById('password');
 
@@ -76,6 +77,7 @@ document.addEventListener('DOMContentLoaded', function() {
             return 'strong';
         }
     }
+
     function getStrengthMessage(strength) {
         if (strength === 'weak') {
             return 'Слабый пароль';
@@ -88,7 +90,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 });
-
 
 // Скрипт для автозаполнения формы
 document.getElementById('username').setAttribute('autocomplete', 'name');
