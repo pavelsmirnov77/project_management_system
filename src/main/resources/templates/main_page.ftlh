@@ -1,7 +1,7 @@
 <#import "template.ftlh" as t />
 <@t.template user!>
     <title>Добро пожаловать!</title>
-    <link rel="stylesheet" type="text/css" href="/static/css/styles.css">
+    <link rel="stylesheet" href="/static/css/styles.css">
     <form method="get" action="/">
         <block>
             <div class="row justify-content-center">
