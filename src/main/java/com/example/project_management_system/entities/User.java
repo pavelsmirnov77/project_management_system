@@ -1,7 +1,9 @@
 package com.example.project_management_system.entities;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
@@ -10,37 +12,48 @@ import java.util.*;
 
 @Entity
 @Data
-@Table(name = "users")
+@Table(name = "users", schema = "project_system")
+@AllArgsConstructor
+@NoArgsConstructor
 public class User implements UserDetails {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Column(unique = true, updatable = false)
+    @Column(name = "email", unique = true, updatable = false)
     private String email;
+    @Column(name = "phone_number")
     private String phoneNumber;
+    @Column(name = "name")
     private String name;
-    @Column(columnDefinition = "date")
+    @Column(name = "date_of_birth", columnDefinition = "date")
     private LocalDate dateOfBirth;
+    @Column(name = "gender")
     private String gender;
+    @Column(name = "description")
     private String description;
 
     @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    @JoinColumn
+    @JoinColumn(name = "avatar")
     private Image avatar;
+    @Column(name = "active")
     private boolean active;
+    @Column(name = "activation_code")
     private String activationCode;
-    @Column(length = 1000)
+    @Column(name = "password", length = 1000)
     private String password;
-    private String role;
+    @Column(name = "role_user")
+    private String roleUser;
 
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER,
             mappedBy = "user")
     private List<File> files = new ArrayList<>();
 
-    public User() {}
-
     public List<File> getFiles() {
         return files;
+    }
+
+    public void setFiles(List<File> files) {
+        this.files = files;
     }
 
     public Long getId() {
@@ -79,6 +92,22 @@ public class User implements UserDetails {
         this.active = active;
     }
 
+    public String getActivationCode() {
+        return activationCode;
+    }
+
+    public void setActivationCode(String activationCode) {
+        this.activationCode = activationCode;
+    }
+
+    public Image getAvatar() {
+        return avatar;
+    }
+
+    public void setAvatar(Image avatar) {
+        this.avatar = avatar;
+    }
+
     public void setPassword(String password) {
         this.password = password;
     }
@@ -100,11 +129,11 @@ public class User implements UserDetails {
     }
 
     public String getRole() {
-        return role;
+        return roleUser;
     }
 
-    public void setRole(String role) {
-        this.role = role;
+    public void setRole(String roleUser) {
+        this.roleUser = roleUser;
     }
 
     public String getDescription() {
