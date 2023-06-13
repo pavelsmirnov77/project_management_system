@@ -25,7 +25,7 @@ public class UserController {
     }
 
     @GetMapping("/registration")
-    public String userRegistration(Principal principal, Model model) {
+    public String registration(Principal principal, Model model) {
         model.addAttribute("user", userService.getUserByPrincipal(principal));
         return "registration";
     }
