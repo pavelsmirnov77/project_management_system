@@ -22,6 +22,7 @@
                             <button type="submit" class="btn btn-primary">Войти</button>
                         </form>
                     </div>
+                    <input type="hidden" name="_csrf" value="${_csrf.token}">
                     <div class="card-footer text-muted">
                         Нет аккаунта? <a href="/registration">Зарегистрироваться</a>
                     </div>
@@ -30,6 +31,6 @@
         </div>
     </block>
     <#if errorMessage??>
-        <h2 style="color: red; font-size: 16px;">${errorMessage}</h2>
+        <h2 style="color: red; font-size: 16px;">${error}</h2>
     </#if>
 </@t.template>
