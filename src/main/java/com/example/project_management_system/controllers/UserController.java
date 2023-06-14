@@ -33,7 +33,7 @@ public class UserController {
     @PostMapping("/registration")
     public String createUser(User student, Model model) {
         if (!userService.createUser(student)) {
-            model.addAttribute("errorMessage", "Регистрация невозможна!");
+            model.addAttribute("errorMessage", "Пользователь с таким email уже зарегистрирован!");
             return "registration";
         }
         return "redirect:/login";

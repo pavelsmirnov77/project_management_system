@@ -18,9 +18,9 @@ public class SecurityConfig {
         http.authorizeHttpRequests((requests) -> requests
                         .requestMatchers("/", "/registration", "/static/**")
                         .permitAll()
-                        .requestMatchers("/teacher_panel/**").hasRole("ROLE_TEACHER")
-                        .requestMatchers("/student_panel/**").hasRole("ROLE_STUDENT")
-                        .requestMatchers("/admin_panel/**").hasRole("ROLE_ADMIN")
+                        .requestMatchers("/teacher_panel/**").hasRole("teacher")
+                        .requestMatchers("/student_panel/**").hasRole("student")
+                        .requestMatchers("/admin_panel/**").hasRole("admin")
                         .anyRequest().authenticated())
                 .formLogin((form) -> form
                         .loginPage("/login")
