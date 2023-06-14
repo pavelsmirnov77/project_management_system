@@ -88,13 +88,13 @@
 }
 
 .navbar {
-    background-color: #f8f9fa;
+    background-color: #007bff;
 }
 
 .navbar-brand {
     font-size: 24px;
     font-weight: bold;
-    color: #333;
+    color: #ffffff !important;
 }
 
 .navbar-toggler {
@@ -116,7 +116,7 @@
 .navbar-nav .nav-link {
     font-size: 16px;
     font-weight: bold;
-    color: #333;
+    color: #ffffff !important;
 }
 
 .profile-name {
@@ -124,7 +124,7 @@
     align-items: center;
     font-size: 16px;
     font-weight: bold;
-    color: #333;
+    color: #ffffff !important;
 }
 
 .profile-name img {
