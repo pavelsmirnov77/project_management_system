@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// Скрипт для проверки совпадения паролей
+//Скрипт для проверки совпадения паролей
 document.getElementById('confirmPassword').addEventListener('input', function() {
     var password = document.getElementById('password').value;
     var confirmPassword = this.value;
@@ -22,13 +22,25 @@ document.getElementById('confirmPassword').addEventListener('input', function() 
     }
 });
 
-// Скрипт для валидации email
+//Скрипт для валидации email
 document.getElementById('email').addEventListener('input', function() {
     var email = this.value;
     var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
     if (!emailRegex.test(email)) {
         this.setCustomValidity('Неправильный формат email');
+    } else {
+        this.setCustomValidity('');
+    }
+});
+
+//Скрипт для валидации даты рождения
+document.getElementById('dateOfBirth').addEventListener('input', function () {
+    var dateOfBirth = this.value;
+    var dateOfBirthRegex = /^(?!0000)(?!00)(?:19|20)\d\d-(?:0[1-9]|1[0-2])-(?:0[1-9]|[12]\d|3[01])$/;
+
+    if (!dateOfBirthRegex.test(dateOfBirth)) {
+        this.setCustomValidity('Неправильный формат даты');
     } else {
         this.setCustomValidity('');
     }
@@ -91,7 +103,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-// Скрипт для автозаполнения формы
+//Скрипт для автозаполнения формы
 document.getElementById('username').setAttribute('autocomplete', 'name');
 document.getElementById('email').setAttribute('autocomplete', 'email');
 document.getElementById('dateOfBirth').setAttribute('autocomplete', 'bday');
