@@ -2,6 +2,7 @@
 <@t.template user>
     <title>Авторизация</title>
     <link rel="stylesheet" type="text/css" href="/static/css/styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <block>
         <div class="row justify-content-center">
             <div class="col-md-6">
@@ -12,17 +13,17 @@
                     <div class="card-body">
                         <form action="/login" method="post">
                             <div class="form-group">
-                                <label for="username">Имя пользователя</label>
-                                <input type="text" class="form-control" id="username" name="username" required>
+                                <label for="username">Имя пользователя (email)</label>
+                                <input type="email" class="form-control" id="email" name="email" required>
                             </div>
                             <div class="form-group">
                                 <label for="password">Пароль</label>
                                 <input type="password" class="form-control" id="password" name="password" required>
                             </div>
+                            <input type="hidden" name="_csrf" value="${_csrf.token}">
                             <button type="submit" class="btn btn-primary">Войти</button>
                         </form>
                     </div>
-                    <input type="hidden" name="_csrf" value="${_csrf.token}">
                     <div class="card-footer text-muted">
                         Нет аккаунта? <a href="/registration">Зарегистрироваться</a>
                     </div>
@@ -30,7 +31,8 @@
             </div>
         </div>
     </block>
-    <#if errorMessage??>
-        <h2 style="color: red; font-size: 16px;">${error}</h2>
+    <p></p>
+    <#if error??>
+        <h2 style="color: red; text-align: center; font-size: 16px;">${error}</h2>
     </#if>
 </@t.template>

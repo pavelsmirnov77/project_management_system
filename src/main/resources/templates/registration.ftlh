@@ -33,7 +33,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="dateOfBirth">Дата рождения</label>
-                                <input type="text" class="form-control" id="dateOfBirth" required name="dateOfBirth" placeholder="дд.мм.гггг">
+                                <input type="text" class="form-control" id="dateOfBirth" required name="dateOfBirth" placeholder="гггг-мм-дд">
                             </div>
                             <div class="form-group">
                                 <label for="phoneNumber">Номер телефона</label>
@@ -74,7 +74,8 @@
             </div>
         </div>
     </block>
+    <p></p>
     <#if errorMessage??>
-        <h2 style="color: red; font-size: 16px;">${errorMessage}</h2>
+        <h2 style="color: red; text-align: center; font-size: 16px;">${errorMessage}</h2>
     </#if>
 </@t.template>

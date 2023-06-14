@@ -2,6 +2,7 @@
 <@t.template user!>
     <title>Добро пожаловать!</title>
     <link rel="stylesheet" href="/static/css/styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <form method="get" action="/">
         <block>
             <div class="row justify-content-center">

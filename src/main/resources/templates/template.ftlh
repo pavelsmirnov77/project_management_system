@@ -10,9 +10,9 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     </head>
     <body>
-    <nav class="navbar navbar-expand-lg navbar-light">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
         <div class="container-fluid">
-            <a href="/" class="navbar-brand">Project</a>
+            <a href="/" class="navbar-brand">Project Controller</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -23,7 +23,7 @@
                         <li class="nav-item profile-name">
                             ${user.name}
                             <a href="/profile">
-                                <img src="/static/images/avatar.png" alt="mdo" width="32" height="32" class="rounded-circle">
+                                <img src="/static/images/default_avatar.png" alt="mdo" width="32" height="32" class="rounded-circle">
                             </a>
                         </li>
                     <#else>
