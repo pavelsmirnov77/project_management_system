@@ -13,7 +13,7 @@
                     <div class="card-body">
                         <form action="/login" method="post">
                             <div class="form-group">
-                                <label for="username">Имя пользователя (email)</label>
+                                <label for="email">Имя пользователя (email)</label>
                                 <input type="email" class="form-control" id="email" name="email" required>
                             </div>
                             <div class="form-group">
