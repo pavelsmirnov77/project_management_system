@@ -75,7 +75,8 @@ const AuthPage = () => {
                     style={{
                         textAlign: 'center',
                         marginTop: '20px'
-                    }}>
+                    }}
+                >
                     <span>У вас нет аккаунта?</span>{" "}
                     <Link to="/api/auth/signup">Зарегистрируйтесь</Link>
                 </div>

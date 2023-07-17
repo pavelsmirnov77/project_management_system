@@ -28,7 +28,8 @@ const UserProfilePage = () => {
                 justifyContent: "center",
                 alignItems: "center",
                 minHeight: "80vh"
-            }}>
+            }}
+        >
             <Card
                 style={{
                     width: 700,
@@ -41,21 +42,24 @@ const UserProfilePage = () => {
                             display: "flex",
                             justifyContent: "center",
                             paddingTop: 20
-                        }}>
+                        }}
+                    >
                         <Upload
                             accept=".png,.jpg,.jpeg"
                             showUploadList={false}
                             beforeUpload={(file) => {
                                 handleAvatarUpload(file);
                                 return false;
-                            }}>
+                            }}
+                        >
                             <div
                                 style={{
                                     position: "relative",
                                     width: "200px",
                                     height: "200px",
                                     cursor: "pointer",
-                                }}>
+                                }}
+                            >
                                 <Avatar
                                     size={200}
                                     icon={<UserOutlined/>}
@@ -64,7 +68,8 @@ const UserProfilePage = () => {
                                         position: "absolute",
                                         top: 0,
                                         left: 0
-                                    }}/>
+                                    }}
+                                />
                                 <div
                                     style={{
                                         position: "absolute",
@@ -77,26 +82,30 @@ const UserProfilePage = () => {
                             </div>
                         </Upload>
                     </div>
-                }>
+                }
+            >
                 <div>
                     <Title
                         level={2}
                         style={{
                             color: '#ffffff',
                             textAlign: 'center'
-                        }}>
+                        }}
+                    >
                         Информация о пользователе
                     </Title>
                 </div>
                 <div
                     style={{
                         margin: '20px 0'
-                    }}>
+                    }}
+                >
                     <Text
                         style={{
                             fontSize: '20px',
                             color: '#ffffff'
-                        }}>
+                        }}
+                    >
                         Имя пользователя: user
                     </Text>
                 </div>
@@ -105,7 +114,8 @@ const UserProfilePage = () => {
                         style={{
                             fontSize: '20px',
                             color: '#ffffff'
-                        }}>
+                        }}
+                    >
                         Email: user@mail.ru
                     </Text>
                 </div>
@@ -114,7 +124,8 @@ const UserProfilePage = () => {
                         display: 'flex',
                         justifyContent: 'center',
                         marginTop: '30px'
-                    }}>
+                    }}
+                >
                     <Link to="/main">
                         <Button
                             icon={<BackwardOutlined/>}

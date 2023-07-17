@@ -11,17 +11,24 @@ export const StartPage = () => {
                 justifyContent: 'center',
                 alignItems: 'center',
                 minHeight: '70vh'
-            }}>
-            <Card title="Система контроля проектов студентов"
-                  style={{
-                      height: 350,
-                      width: 600,
-                      textAlign: 'center',
-                      borderWidth: 1,
-                      borderColor: "black"
-                  }}>
-                <div className="auth-page">
-                    <h1 className="auth-title">
+            }}
+        >
+            <Card
+                title="Система контроля проектов студентов"
+                style={{
+                    height: 350,
+                    width: 600,
+                    textAlign: 'center',
+                    borderWidth: 1,
+                    borderColor: "black"
+                }}
+            >
+                <div
+                    className="auth-page"
+                >
+                    <h1
+                        className="auth-title"
+                    >
                         <UserOutlined className="auth-icon"/>
                         Добро пожаловать!
                     </h1>
@@ -30,27 +37,35 @@ export const StartPage = () => {
                         Здесь вы можете создавать, редактировать и отслеживать свои проекты,
                         делиться информацией с другими участниками и многое другое.
                     </p>
-                    <p>Пожалуйста, выберите действие:</p>
-                    <div className="auth-buttons">
+                    <p>
+                        Пожалуйста, выберите действие:
+                    </p>
+                    <div
+                        className="auth-buttons"
+                    >
                         <Link to="/api/auth/signin">
-                            <Button type="primary"
-                                    size="large"
-                                    className="auth-button"
-                                    style={{
-                                        backgroundColor: '#333232',
-                                        width: 130,
-                                        marginRight: 10
-                                    }}>
+                            <Button
+                                type="primary"
+                                size="large"
+                                className="auth-button"
+                                style={{
+                                    backgroundColor: '#333232',
+                                    width: 130,
+                                    marginRight: 10
+                                }}
+                            >
                                 Вход
                             </Button>
                         </Link>
                         <Link to="/api/auth/signup">
-                            <Button type="default"
-                                    size="large"
-                                    className="auth-button"
-                                    style={{
-                                        width: 130
-                                    }}>
+                            <Button
+                                type="default"
+                                size="large"
+                                className="auth-button"
+                                style={{
+                                    width: 130
+                                }}
+                            >
                                 Регистрация
                             </Button>
                         </Link>

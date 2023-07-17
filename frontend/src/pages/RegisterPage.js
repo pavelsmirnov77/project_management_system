@@ -92,8 +92,16 @@ const RegistrationPage = () => {
                         }]}
                     >
                         <Radio.Group onChange={onChange} value={value}>
-                            <Radio value={1}>Студент</Radio>
-                            <Radio value={2}>Преподаватель</Radio>
+                            <Radio
+                                value={1}
+                            >
+                                Студент
+                            </Radio>
+                            <Radio
+                                value={2}
+                            >
+                                Преподаватель
+                            </Radio>
                         </Radio.Group>
                     </Form.Item>
                     <Form.Item

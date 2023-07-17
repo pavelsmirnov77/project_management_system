@@ -24,7 +24,11 @@ const MenuBar = () => {
     };
 
     return (
-        <Layout style={{minHeight: '100vh'}}>
+        <Layout
+            style={{
+                minHeight: '100vh'
+            }}
+        >
             <Header
                 style={{
                     background: '#333232',
@@ -37,32 +41,57 @@ const MenuBar = () => {
                     zIndex: 1,
                 }}
             >
-                <div style={{display: 'flex', alignItems: 'center'}}>
+                <div
+                    style={{
+                        display: 'flex',
+                        alignItems: 'center'
+                    }}
+                >
                     <Button
                         type="text"
                         style={{color: '#fff', marginRight: '16px'}}
                         onClick={toggleSidebar}
                         icon={<MenuOutlined/>}
                     />
-                    <h1 style={{color: '#fff', margin: 0}}>Project manager</h1>
+                    <h1
+                        style={{
+                            color: '#fff',
+                            margin: 0
+                        }}
+                    >
+                        Project manager
+                    </h1>
                 </div>
-                <div style={{display: 'flex', alignItems: 'center'}}>
+                <div
+                    style={{
+                        display: 'flex',
+                        alignItems: 'center'
+                    }}
+                >
                     <Link to="/users/profile">
-                        <Tooltip title="Профиль пользователя" placement="bottom">
+                        <Tooltip
+                            title="Профиль пользователя"
+                            placement="bottom"
+                        >
                             <span style={{
                                 marginLeft: '15px',
                                 marginRight: '10px',
                                 color: '#fff',
                                 fontSize: '18px',
                                 fontWeight: 'bold'
-                            }}>
+                            }}
+                            >
                             </span>
                             <Avatar icon={<UserOutlined/>}/>
                         </Tooltip>
                     </Link>
                 </div>
             </Header>
-            <Layout style={{marginTop: '64px'}}>
+            <Layout
+                style={{
+                    marginTop: '64px'
+                }}
+            >
                 <Sider
                     theme="dark"
                     trigger={null}
@@ -90,15 +119,19 @@ const MenuBar = () => {
                         </Menu.Item>
                     </Menu>
                 </Sider>
-                <Layout style={{
-                    marginLeft: collapsed ? 80 : 200,
-                    padding: '0 24px 24px'
-                }}>
-                    <Content style={{
-                        margin: '24px 0',
-                        padding: 24,
-                        height: '100%'
-                    }}>
+                <Layout
+                    style={{
+                        marginLeft: collapsed ? 80 : 200,
+                        padding: '0 24px 24px'
+                    }}
+                >
+                    <Content
+                        style={{
+                            margin: '24px 0',
+                            padding: 24,
+                            height: '100%'
+                        }}
+                    >
                     </Content>
                 </Layout>
             </Layout>
