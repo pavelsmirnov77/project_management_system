@@ -23,7 +23,11 @@ public class UserDetailsImpl implements UserDetails {
 
     private String username;
 
+    private String login;
+
     private String email;
+
+    private String description;
 
     @JsonIgnore
     private String password;
@@ -37,8 +41,10 @@ public class UserDetailsImpl implements UserDetails {
 
         return new UserDetailsImpl(user.getId(),
                 user.getUsername(),
+                user.getLogin(),
                 user.getEmail(),
                 user.getPassword(),
+                user.getDescription(),
                 authorities);
     }
 
@@ -63,6 +69,14 @@ public class UserDetailsImpl implements UserDetails {
     @Override
     public String getUsername() {
         return username;
+    }
+
+    public String getLogin() {
+        return login;
+    }
+
+    public String description() {
+        return description;
     }
 
     @Override

@@ -2,14 +2,28 @@ import {Button, Card, Form, Input, message} from 'antd';
 import {UserOutlined, LockOutlined, LoginOutlined} from '@ant-design/icons';
 import {Link, useNavigate} from "react-router-dom";
 import "../css/pagesStyles.css"
+import {useDispatch} from "react-redux";
+import {login} from "../slices/authSlice";
+import authService from "../services/authService";
 
 const AuthPage = () => {
     const [form] = Form.useForm();
     const navigate = useNavigate();
+    const dispatch = useDispatch();
+
     const onFinish = (values) => {
-        message.success("Вы успешно вошли в систему!")
-        navigate("/main")
+        authService.login(values).then((user) => {
+            console.log(user)
+            dispatch(login(user))
+            message.success("Вы успешно вошли в систему! Здравствуйте!")
+            navigate("/todo/note")
+        }, (error) => {
+            const _content = (error.response && error.response.data) || error.message || error.toString();
+            console.log(_content);
+            message.error("Неверно указан логин или пароль!")
+        });
     };
+
     return (
         <div
             style={{
@@ -34,7 +48,7 @@ const AuthPage = () => {
                     onFinish={onFinish}
                 >
                     <Form.Item
-                        name="username"
+                        name="login"
                         label="Логин"
                         rules={[{
                             required: true,

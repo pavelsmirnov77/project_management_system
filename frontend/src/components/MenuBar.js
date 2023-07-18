@@ -12,6 +12,7 @@ const {Header, Content, Sider} = Layout;
 const MenuBar = () => {
     const [collapsed, setCollapsed] = useState(true);
     const location = useLocation();
+    const user = JSON.parse(localStorage.getItem("user"));
 
     const toggleSidebar = () => {
         setCollapsed(!collapsed);
@@ -81,6 +82,7 @@ const MenuBar = () => {
                                 fontWeight: 'bold'
                             }}
                             >
+                                {user.username}
                             </span>
                             <Avatar icon={<UserOutlined/>}/>
                         </Tooltip>

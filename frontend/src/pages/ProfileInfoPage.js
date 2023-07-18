@@ -1,14 +1,26 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import {Card, Avatar, Typography, Button, Upload, message} from "antd";
 import {UserOutlined, LogoutOutlined, BackwardOutlined} from "@ant-design/icons";
 import {Link} from "react-router-dom";
+import {useDispatch, useSelector} from "react-redux";
+import UserService from "../services/userService";
+import AuthService from "../services/authService";
+import {setUser} from "../slices/userSlice";
 
 const {Title, Text} = Typography;
 
 const UserProfilePage = () => {
     const [avatar, setAvatar] = useState(null);
+    const dispatch = useDispatch();
+    const userId = useSelector((state) => state.user.user.id);
+    const user = JSON.parse(localStorage.getItem("user"));
+
+    useEffect(() => {
+        UserService.getUser(userId, dispatch);
+    }, [dispatch, userId]);
 
     const handleLogout = () => {
+        AuthService.logout();
         message.success("Вы успешно вышли! До свидания!")
     };
 
@@ -16,6 +28,7 @@ const UserProfilePage = () => {
         const reader = new FileReader();
         reader.onload = (e) => {
             setAvatar(e.target.result);
+            dispatch(setUser({...user, avatar: e.target.result}));
             message.success("Аватарка успешно загружена");
         };
         reader.readAsDataURL(file);

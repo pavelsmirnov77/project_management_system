@@ -3,14 +3,22 @@ import React, {useState} from "react";
 import {LockOutlined, MailOutlined, UserAddOutlined, UserOutlined} from "@ant-design/icons";
 import {Link, useNavigate} from "react-router-dom";
 import TextArea from "antd/es/input/TextArea";
+import authService from "../services/authService";
 
 const RegistrationPage = () => {
     const [form] = Form.useForm();
     const navigate = useNavigate();
 
     const onFinish = (values) => {
-        message.success('Вы успешно зарегистрированы');
-        navigate('/api/auth/signin');
+        authService.register(values)
+            .then(() => {
+                message.success('Вы успешно зарегистрированы');
+                navigate('/api/auth/signin');
+            })
+            .catch((error) => {
+                message.error('Ошибка при регистрации');
+                console.error(error);
+            });
     };
 
     const [value, setValue] = useState(1);
@@ -153,8 +161,7 @@ const RegistrationPage = () => {
                 </div>
             </Card>
         </div>
-    )
-        ;
+    );
 };
 
 export default RegistrationPage;
