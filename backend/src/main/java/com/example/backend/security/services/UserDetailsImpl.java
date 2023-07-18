@@ -75,7 +75,7 @@ public class UserDetailsImpl implements UserDetails {
         return login;
     }
 
-    public String description() {
+    public String getDescription() {
         return description;
     }
 

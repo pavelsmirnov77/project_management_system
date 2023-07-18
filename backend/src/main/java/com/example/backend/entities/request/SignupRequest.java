@@ -24,7 +24,6 @@ public class SignupRequest {
 
     @NotBlank
     @Size(max = 255)
-    @Email
     private String description;
 
     private Set<String> role;
