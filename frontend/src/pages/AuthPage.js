@@ -76,7 +76,7 @@ const AuthPage = () => {
                     <Form.Item>
                         <Button
                             style={{
-                                backgroundColor: '#333232'
+                                backgroundColor: '#0053ff'
                             }}
                             type="primary"
                             icon={<LoginOutlined/>}
