@@ -48,7 +48,7 @@ const AuthPage = () => {
                     onFinish={onFinish}
                 >
                     <Form.Item
-                        name="login"
+                        name="username"
                         label="Логин"
                         rules={[{
                             required: true,

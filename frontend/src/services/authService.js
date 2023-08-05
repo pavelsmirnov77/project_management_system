@@ -3,23 +3,20 @@ import axios from "axios";
 const API_URL = "/api/auth/";
 
 const register = (registration) => {
-    const {username, login, email, description, password} = registration;
+    const {username, email, password} = registration;
     return axios.post(API_URL + "signup", {
-            username,
-            login,
-            email,
-            description,
-            password
-        },
-    );
+        username,
+        email,
+        password,
+    },);
 };
 
-const login = (info) => {
-    const {login, password} = info;
+const login = (login) => {
+    const {username, password} = login;
 
     return axios
         .post(API_URL + "signin", {
-            login,
+            username,
             password,
         })
         .then((response) => {
@@ -32,8 +29,10 @@ const login = (info) => {
 };
 
 const logout = () => {
+
     console.log("logout")
     localStorage.removeItem("user");
+
 };
 
 const authService = {

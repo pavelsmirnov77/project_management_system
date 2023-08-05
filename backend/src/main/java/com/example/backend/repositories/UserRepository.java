@@ -9,12 +9,12 @@ import java.util.Optional;
 @Repository
 public interface UserRepository extends JpaRepository<User, Long> {
     /**
-     * Ищет пользователя по логину
+     * Ищет пользователя по имени
      *
-     * @param login заданный логин пользователя
-     * @return пользователь с заданным логином
+     * @param username заданное имя пользователя
+     * @return пользователя с заданным именем
      */
-    Optional<User> findByLogin(String login);
+    Optional<User> findByUsername(String username);
 
     /**
      * Ищет пользователя по электронной почте
@@ -25,12 +25,12 @@ public interface UserRepository extends JpaRepository<User, Long> {
     Optional<User> findByEmail(String email);
 
     /**
-     * Проверяет существует ли пользователь с заданным логином
+     * Проверяет существует ли пользователь с заданным именем
      *
-     * @param login заданный логин пользователя
+     * @param username заданное имя пользователя
      * @return true, если пользователь существует, иначче false
      */
-    Boolean existsByLogin(String login);
+    Boolean existsByUsername(String username);
 
     /**
      * Проверяет существует ли пользователь с заданным email

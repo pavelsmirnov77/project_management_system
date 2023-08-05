@@ -48,7 +48,7 @@ const RegistrationPage = () => {
                     name="register"
                     onFinish={onFinish}>
                     <Form.Item
-                        name="username"
+                        name="name"
                         label="Имя"
                         rules={[{
                             required: true,
@@ -61,7 +61,7 @@ const RegistrationPage = () => {
                         />
                     </Form.Item>
                     <Form.Item
-                        name="login"
+                        name="username"
                         label="Псевдоним"
                         rules={[{
                             required: true,

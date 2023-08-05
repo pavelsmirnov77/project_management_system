@@ -8,7 +8,7 @@ export const NotFoundPage = () => {
             status="404"
             title="404"
             subTitle="Такой страницы нет =("
-            extra={<Button type="primary"><Link to="/">Назад на главную</Link></Button>}
+            extra={<Button type="primary"><Link to="/main">Назад на главную</Link></Button>}
         />
     )
 }

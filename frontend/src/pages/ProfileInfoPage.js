@@ -119,7 +119,7 @@ const UserProfilePage = () => {
                             color: '#ffffff'
                         }}
                     >
-                        Имя пользователя: user
+                        Имя пользователя: {user.username}
                     </Text>
                 </div>
                 <div>
@@ -129,7 +129,7 @@ const UserProfilePage = () => {
                             color: '#ffffff'
                         }}
                     >
-                        Email: user@mail.ru
+                        Email: {user.email}
                     </Text>
                 </div>
                 <div
