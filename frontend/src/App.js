@@ -5,6 +5,7 @@ import {NotFoundPage} from "./pages/NotFountPage";
 import AuthPage from "./pages/AuthPage";
 import RegisterPage from "./pages/RegisterPage";
 import ProfileInfoPage from "./pages/ProfileInfoPage";
+import HomeworkPage from "./pages/HomeworkPage";
 
 function App() {
     return (
@@ -14,6 +15,7 @@ function App() {
             <Route path="/api/auth/signup" element={<RegisterPage/>}/>
             <Route path="/main" element={<MainPage/>}/>
             <Route path="/users/profile" element={<ProfileInfoPage/>}/>
+            <Route path="/homework" element={<HomeworkPage/>}/>
             <Route path="/*" element={<NotFoundPage/>}/>
         </Routes>
     );

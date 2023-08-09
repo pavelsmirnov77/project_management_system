@@ -49,7 +49,7 @@ export const StartPage = () => {
                                 size="large"
                                 className="auth-button"
                                 style={{
-                                    backgroundColor: '#333232',
+                                    backgroundColor: '#0053ff',
                                     width: 130,
                                     marginRight: 10
                                 }}

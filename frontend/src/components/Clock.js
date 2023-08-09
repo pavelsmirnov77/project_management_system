@@ -31,8 +31,8 @@ export const Clock = () => {
             }}
             hoverable
         >
-            <div style={{ marginBottom: "16px" }}>
-                <CalendarOutlined style={{ fontSize: "24px", marginRight: "8px" }} />
+            <div style={{marginBottom: "16px"}}>
+                <CalendarOutlined style={{fontSize: "24px", marginRight: "8px"}}/>
                 {selectedDate.format("DD-MM-YYYY")}
             </div>
             <div style={{marginBottom: "8px"}}>

@@ -1,7 +1,8 @@
 import React, {useState} from 'react';
 import {Layout, Menu, Button, Avatar, Tooltip} from 'antd';
 import {
-    HomeOutlined,
+    BookOutlined,
+    CheckOutlined, HomeOutlined,
     MenuOutlined,
     UserOutlined,
 } from '@ant-design/icons';
@@ -116,8 +117,14 @@ const MenuBar = () => {
                         selectedKeys={[location.pathname]}
                         onClick={handleMenuClick}
                     >
-                        <Menu.Item key="/homework" icon={<HomeOutlined/>}>
+                        <Menu.Item key="/main" icon={<HomeOutlined/>}>
+                            <Link to="/main">Главная страница</Link>
+                        </Menu.Item>
+                        <Menu.Item key="/homework" icon={<BookOutlined/>}>
                             <Link to="/homework">Домашнее задание</Link>
+                        </Menu.Item>
+                        <Menu.Item key="/notes" icon={<CheckOutlined/>}>
+                            <Link to="/notes">Задачи</Link>
                         </Menu.Item>
                     </Menu>
                 </Sider>

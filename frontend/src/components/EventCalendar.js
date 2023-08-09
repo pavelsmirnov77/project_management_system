@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
 import '../css/calendar.css'
@@ -15,7 +15,7 @@ const EventCalendar = () => {
         setMarkedDates([...markedDates, selectedDate]);
     };
 
-    const tileContent = ({ date, view }) => {
+    const tileContent = ({date, view}) => {
         if (view === 'month') {
             return markedDates.find(markDate => markDate.toDateString() === date.toDateString()) ? (
                 <div className="mark"></div>
