@@ -42,6 +42,9 @@ public class User {
             inverseJoinColumns = @JoinColumn(name = "role_id"))
     private Set<Role> roles = new HashSet<>();
 
+    @ManyToOne(cascade = CascadeType.REFRESH, fetch = FetchType.EAGER)
+    private Course course;
+
     public User(String username, String email, String password) {
         this.username = username;
         this.email = email;
