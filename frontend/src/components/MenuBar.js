@@ -4,7 +4,7 @@ import {
     BookOutlined,
     CheckOutlined, HomeOutlined,
     MenuOutlined,
-    UserOutlined,
+    UserOutlined, WechatOutlined,
 } from '@ant-design/icons';
 import {Link, useLocation} from 'react-router-dom';
 
@@ -121,6 +121,9 @@ const MenuBar = () => {
                         </Menu.Item>
                         <Menu.Item key="/notes" icon={<CheckOutlined/>}>
                             <Link to="/notes">Задачи</Link>
+                        </Menu.Item>
+                        <Menu.Item key="/chats" icon={<WechatOutlined/>}>
+                            <Link to="/chats">Чаты</Link>
                         </Menu.Item>
                     </Menu>
                 </Sider>

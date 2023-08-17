@@ -6,6 +6,7 @@ import AuthPage from "./pages/AuthPage";
 import RegisterPage from "./pages/RegisterPage";
 import ProfileInfoPage from "./pages/ProfileInfoPage";
 import HomeworkPage from "./pages/HomeworkPage";
+import ChatPage from "./pages/ChatPage";
 
 function App() {
     return (
@@ -16,6 +17,7 @@ function App() {
             <Route path="/main" element={<MainPage/>}/>
             <Route path="/users/profile" element={<ProfileInfoPage/>}/>
             <Route path="/homework" element={<HomeworkPage/>}/>
+            <Route path="/chats" element={<ChatPage/>}/>
             <Route path="/*" element={<NotFoundPage/>}/>
         </Routes>
     );
