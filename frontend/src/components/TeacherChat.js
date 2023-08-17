@@ -1,4 +1,3 @@
-// TeacherChat.js
 import React, { useState } from 'react';
 import { Input, Button, List, Avatar, Empty } from 'antd';
 import { SendOutlined } from '@ant-design/icons';
