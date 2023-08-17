@@ -123,7 +123,7 @@ const MenuBar = () => {
                             <Link to="/notes">Задачи</Link>
                         </Menu.Item>
                         <Menu.Item key="/chats" icon={<WechatOutlined/>}>
-                            <Link to="/chats">Чаты</Link>
+                            <Link to="/chats">Диалоги</Link>
                         </Menu.Item>
                     </Menu>
                 </Sider>
