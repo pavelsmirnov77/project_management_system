@@ -1,0 +1,82 @@
+.homework-page {
+    padding: 20px;
+}
+
+.homework-form {
+    width: 450px;
+    margin: 0 auto;
+}
+
+.homework-cards {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(700px, 1fr));
+    gap: 20px;
+}
+
+.homework-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #dce9ff;
+}
+
+.add-homework-button {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ant-modal-title {
+    text-align: center;
+}
+
+.ant-modal-body {
+    padding: 20px;
+}
+
+.ant-modal-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ant-modal-footer button {
+    margin: 0;
+}
+
+.homework-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.homework-card ul li {
+    margin-bottom: 5px;
+}
+
+.homework-card ul li a {
+    color: #1890ff;
+    text-decoration: underline;
+}
+
+.status-circle {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 5px;
+    display: inline-block;
+}
+
+.status-container {
+    display: flex;
+    align-items: center;
+}
+
+.red {
+    background-color: red;
+}
+
+.green {
+    background-color: green;
+}
