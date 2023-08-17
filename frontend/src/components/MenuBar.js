@@ -26,11 +26,7 @@ const MenuBar = () => {
     };
 
     return (
-        <Layout
-            style={{
-                minHeight: '100vh'
-            }}
-        >
+        <Layout>
             <Header
                 style={{
                     background: '#0053ff',
@@ -131,6 +127,7 @@ const MenuBar = () => {
                 <Layout
                     style={{
                         marginLeft: collapsed ? 80 : 200,
+                        background:"white",
                         padding: '0 24px 24px'
                     }}
                 >
