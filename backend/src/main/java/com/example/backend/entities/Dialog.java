@@ -6,17 +6,15 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
-@Table(name = "subjects")
+@Table(name = "dialogs")
 @Data
-@NoArgsConstructor
 @AllArgsConstructor
-public class Subject {
+@NoArgsConstructor
+public class Dialog {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    private String name;
-
     @ManyToOne(cascade = CascadeType.REFRESH, fetch = FetchType.EAGER)
-    private Course course;
+    private User user;
 }

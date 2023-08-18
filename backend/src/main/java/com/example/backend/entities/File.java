@@ -14,11 +14,16 @@ public class File {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
+
     private String name;
+
     private long size;
+
     private String contentType;
+
     @Column(columnDefinition = "bytea")
     private byte[] bytes;
+
     @ManyToOne(cascade = CascadeType.REFRESH, fetch = FetchType.EAGER)
     private Homework homework;
 }
