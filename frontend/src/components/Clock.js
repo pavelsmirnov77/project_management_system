@@ -23,7 +23,7 @@ export const Clock = () => {
                 width: "270px",
                 textAlign: "center",
                 padding: "8px",
-                background: "#0053ff",
+                background: "#2867fa",
                 color: "#fff",
                 fontSize: "16px",
                 borderRadius: "8px",

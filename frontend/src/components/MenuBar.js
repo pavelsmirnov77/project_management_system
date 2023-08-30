@@ -29,7 +29,7 @@ const MenuBar = () => {
         <Layout>
             <Header
                 style={{
-                    background: '#0053ff',
+                    background: '#2867fa',
                     padding: '0 24px',
                     display: 'flex',
                     alignItems: 'center',
@@ -103,11 +103,11 @@ const MenuBar = () => {
                         height: '100vh',
                         position: 'fixed',
                         left: 0,
-                        background: '#0053ff',
+                        background: '#2867fa',
                     }}
                 >
                     <Menu
-                        style={{background: '#0053ff'}}
+                        style={{background: '#2867fa'}}
                         theme="dark"
                         mode="inline"
                         selectedKeys={[location.pathname]}

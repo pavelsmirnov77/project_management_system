@@ -142,7 +142,7 @@ const RegistrationPage = () => {
                     <Form.Item>
                         <Button
                             style={{
-                                backgroundColor: '#0053ff'
+                                backgroundColor: '#2867fa'
                             }}
                             type="primary"
                             icon={<UserAddOutlined/>}

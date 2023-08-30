@@ -49,17 +49,18 @@ const DialogsPage = () => {
             >
                 <div
                     style={{
-                        width: '1260px',
+                        width: '1150px',
                         marginLeft: '90px'
                     }}
                 >
                     <Input
+                        style={{marginLeft: "100px"}}
                         placeholder="Поиск диалогов по имени"
                         value={searchValue}
                         onChange={handleSearchChange}
                     />
                 </div>
-                <Button type="primary" onClick={showModal}>
+                <Button style={{marginLeft: "10px"}} type="primary" onClick={showModal}>
                     Создать чат
                 </Button>
             </div>
@@ -68,6 +69,7 @@ const DialogsPage = () => {
                     position: "absolute",
                     left: "50%",
                     transform: "translateX(-50%)",
+                    marginLeft: "100px"
                 }}
             >
                 {dialogs.length > 0 ? (

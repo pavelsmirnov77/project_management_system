@@ -47,7 +47,7 @@ const UserProfilePage = () => {
                 style={{
                     width: 700,
                     height: 500,
-                    backgroundColor: '#0053ff'
+                    backgroundColor: '#2867fa'
                 }}
                 cover={
                     <div
